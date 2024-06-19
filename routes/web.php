@@ -22,7 +22,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('admin/dashboard',[HomeController::class,'index']);
     Route::get('/admin/subjects',[SubjectsController::class,'index'])->name('admin/subjects');
-   });
+    Route::get('/admin/subjects/create',[SubjectsController::class,'create'])->name('admin/subjects/create');
+    Route::post('/admin/subjects/save',[SubjectsController::class,'save'])->name('admin/subjects/save');
+
+});
 
 require __DIR__.'/auth.php';
 
