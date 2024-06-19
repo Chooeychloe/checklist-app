@@ -36,5 +36,46 @@ class SubjectsController extends Controller
         return redirect(route('admin.subjects/create'));
        }
     
+       
     }
+    public function delete($id){
+        $subjects = Subjects::findOrFail($id)->delete();
+        if($subjects) {
+            session()->flash('success', 'Subject Deleted Succesfully');
+            return redirect(route('admin/subjects'));
+           }
+           else{
+            session()->flash('error', 'Product not deleted');
+            return redirect(route('admin.subjects'));
+           }
+    }
+    public function edit($id){
+        $subjects = Subjects::findOrFail($id);
+        return view('admin.subjects.update', compact('subjects'));
+    }
+
+    public function update(Request $request,$id){
+        $subjects = Subjects::findOrFail($id);
+        $subject_code = $request->subject_code;
+        $subject_name = $request->subject_name;
+        $grade = $request->grade;
+        $instructor = $request->instructor;
+
+        $subjects->subject_code = $subject_code;
+        $subjects->subject_name = $subject_name;
+        $subjects->grade = $grade;
+        $subjects->instructor = $instructor;
+
+        $data = $subjects->save();
+        if($data) {
+            session()->flash('success', 'Subject Updated Succesfully');
+            return redirect(route('admin/subjects'));
+           }
+           else{
+            session()->flash('error', 'Some problem occur');
+            return redirect(route('admin.subjects/update'));
+           }
+
+    }
+    
 }

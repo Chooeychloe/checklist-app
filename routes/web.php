@@ -24,6 +24,9 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::get('/admin/subjects',[SubjectsController::class,'index'])->name('admin/subjects');
     Route::get('/admin/subjects/create',[SubjectsController::class,'create'])->name('admin/subjects/create');
     Route::post('/admin/subjects/save',[SubjectsController::class,'save'])->name('admin/subjects/save');
+    Route::get('/admin/subjects/edit/{id}',[SubjectsController::class,'edit'])->name('admin/subjects/edit');
+    Route::put('/admin/subjects/edit/{id}',[SubjectsController::class,'update'])->name('admin/subjects/update');
+    Route::get('/admin/subjects/delete/{id}',[SubjectsController::class,'delete'])->name('admin/subjects/delete');
 
 });
 

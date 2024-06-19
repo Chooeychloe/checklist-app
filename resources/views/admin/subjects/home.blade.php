@@ -40,8 +40,8 @@
                                 <td class="align-middle">{{$subject->instructor}}</td>
                                 <td class="align-middle">
                                     <div class="btn-group" role="" aria-label="Basic example">
-                                        <a href="" type="button" class="btn btn-secondary">Edit</a>
-                                        <a href="" type="button" class="btn btn-danger">Delete</a>
+                                        <a href="{{ route('admin/subjects/edit', ['id'=>$subject->id])}}" type="button" class="btn btn-secondary">Edit</a>
+                                        <a href="{{ route('admin/subjects/delete', ['id'=>$subject->id])}}" type="button" class="btn btn-danger">Delete</a>
 
                                     </div>
                                 </td>
