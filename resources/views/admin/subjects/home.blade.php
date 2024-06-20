@@ -25,6 +25,12 @@
                             <tr>
                                 <th>Subject Code</th>
                                 <th>Subject Name</th>
+                                <th>Unit Lec</th>
+                                <th>Unit Lab</th>
+                                <th>Hrs Lec</th>
+                                <th>Hrs Lab</th>
+                                <th>Prerequisite</th>
+                                <th>Semester or Year Taken</th>
                                 <th>Grade</th>
                                 <th>Instructor</th>
                                 <th>Actions</th>
@@ -36,6 +42,12 @@
                             <tr>
                                 <td class="align-middle">{{$subject->subject_code}}</td>
                                 <td class="align-middle">{{$subject->subject_name}}</td>
+                                <td class="align-middle">{{$subject->credit_unit_lec}}</td>
+                                <td class="align-middle">{{$subject->credit_unit_lab}}</td>
+                                <td class="align-middle">{{$subject->contact_hrs_lec}}</td>
+                                <td class="align-middle">{{$subject->contact_hrs_lab}}</td>
+                                <td class="align-middle">{{$subject->pre_requisite}}</td>
+                                <td class="align-middle">{{$subject->semester_yr_taken}}</td>
                                 <td class="align-middle">{{$subject->grade}}</td>
                                 <td class="align-middle">{{$subject->instructor}}</td>
                                 <td class="align-middle">

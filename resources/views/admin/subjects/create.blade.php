@@ -40,6 +40,60 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col">
+                                <input type="text" name="credit_unit_lec" class="form-control"
+                                    placeholder="Unit Lec">
+                                    @error('credit_unit_lec')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" name="credit_unit_lab" class="form-control"
+                                    placeholder="Unit Lab">
+                                    @error('credit_unit_lab')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" name="contact_hrs_lec" class="form-control"
+                                    placeholder="Contact Hrs Lec">
+                                    @error('contact_hrs_lec')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" name="contact_hrs_lab" class="form-control"
+                                    placeholder="Contact Hrs Lab">
+                                    @error('contact_hrs_lab')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" name="pre_requisite" class="form-control"
+                                    placeholder="Prerequisite">
+                                    @error('pre_requisite')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" name="semester_yr_taken" class="form-control"
+                                    placeholder="Semester & Year Taken">
+                                    @error('semester_yr_taken')
+                                    <span class="text-danger">{{$message}}</span>                                        
+                                    @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
                                 <input type="text" name="grade" class="form-control" placeholder="Grade">
                                 @error('grade')
                                 <span class="text-danger">{{$message}}</span>                                        
